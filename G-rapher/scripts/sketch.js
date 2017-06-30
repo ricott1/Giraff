@@ -14,13 +14,14 @@ var r = 50;
 function setup() {
   createCanvas(800, 800);
   hash_input = createInput("daa271eb81b2123412");
-  hash_input.position(20, 20);
-
+  hash_input.position(20, 120);
+  var text = createElement('h2', "Insert Hex (hash), Min length 16");
+  text.position(20, 20);
   var button = createButton('Read');
-  button.position(hash_input.x + hash_input.width + 20, 20);
+  button.position(hash_input.x + hash_input.width + 20, 120);
   button.mousePressed(get_hash);
   hash_text = createElement('h2', "Current Hash: ");
-  hash_text.position(20, 65);
+  hash_text.position(hash_input.x + hash_input.width + 200, 120);
 
 }
 
