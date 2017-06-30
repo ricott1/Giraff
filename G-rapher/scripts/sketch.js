@@ -8,13 +8,16 @@ var hash_input;
 var hash_text;
 var r = 50;
 
+var colours = ['Chartreuse', 'Coral', 'CornflowerBlue', 'Cornsilk', 'Cyan','DarkCyan','DarkGoldenRod',
+'DarkGrey','DarkGreen','DarkKhaki ',  'DarkOrange', 'DarkOrchid', 'DarkRed', 'DarkSalmon','HotPink','Yellow'];
+
 //00000000387d715cd2cc44cd8f206568e9c478728613f0413579daa271eb81b2
 
 
 
 function setup() {
   canvas = createCanvas(800, 1000);
-  hash_input = createInput("daa271eb81b2123412");
+  hash_input = createInput("0123456789abcdef");
   hash_input.position(20, 120);
   var text = createElement('h2', "Insert Hex (hash), Min length 16");
   text.position(20, 20);
@@ -92,7 +95,7 @@ function Node(i, value) {
       this.text.position(this.x-0.17*r, this.y-0.7*r);
       push();
       strokeWeight(6);
-      fill(255, 255, 255);
+      fill(colours[parseInt(this.value, 16)]);
       //stroke(255 - weigth, 255 - weigth, 255);
       ellipse(this.x, this.y , r, r);
 
