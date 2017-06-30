@@ -12,7 +12,7 @@ var r = 50;
 
 
 function setup() {
-  canvas = createCanvas(800, 800);
+  canvas = createCanvas(800, 1000);
   hash_input = createInput("daa271eb81b2123412");
   hash_input.position(20, 120);
   var text = createElement('h2', "Insert Hex (hash), Min length 16");
@@ -29,7 +29,9 @@ function get_hash() {
   canvas.background(255);
     canvas.fill(255);
     for (var i = 0; i < nodes.length; i++) {
-      nodes[i].text.remove();
+      if(nodes[i].text){
+         nodes[i].text.remove();
+      }
   }
   nodes = [];
    links = [];
@@ -37,7 +39,13 @@ function get_hash() {
   hash_text.html("Current Hash: " + hash);
   for (var i = 0; i < hash.length; i++) {
     nodes.push(new Node(i, hash.charAt(i)));
-    links.push(new Array(i, parseInt(hash.charAt(i), 16)));
+    var n = parseInt(hash.charAt(i), 16);
+    for (var j = 1; j < int(hash.length/n) + 1; j++) {
+      var m = n * j -1;
+      if(i != m) {
+         links.push(new Array(i, m));
+      }
+   }
   }
   draw_graph();
   
@@ -63,8 +71,8 @@ function Node(i, value) {
    this.colour = (255, 255, 255);
    this.value = value;
    this.index = int(i);
-   this.x = 250 + 4*r * Math.cos(1.0*int(i) * TWO_PI/hash.length);
-   this.y = 400 + 4*r * Math.sin(int(i) * TWO_PI/hash.length);
+   this.x = 400 + 5*r * Math.cos(1.0*int(i) * TWO_PI/hash.length);
+   this.y = 500 + 5*r * Math.sin(int(i) * TWO_PI/hash.length);
    
    
    this.show = function() {
