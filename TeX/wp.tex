@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+
+% Formatting
+\usepackage[margin=1in]{geometry}
+   
+% Fonts
+\usepackage[utf8]{inputenc}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage[]{algorithm2e}
+\usepackage{siunitx}
+\usepackage{chngcntr}
+\graphicspath{{../Figures/}}
+
+% Bibliography 
+\usepackage[super,comma,sort&compress]{natbib}
+
+% Spacing
+\usepackage{setspace} 
+\doublespacing
+
+% Misc
+\usepackage{xspace}
+\usepackage{url}
+\usepackage{float}
+
+% custom commands
+
+\begin{document}
+
+%\title{Achieving stability and structural complexity in target-free RNA evolution}
+\title{Proof of Work Algorithms for Solving NP-Complete Problems}
+\author{Pericles Philippopoulos$^{1}$, Alessandro Ricottone$^1$, Carlos Oliver$^{2,}\footnote{To whom correspondence should be addressed. Tel: +1 514-555-5018; Email: \texttt{carlos.gonzalezoliverl@mcgill.ca}}
+$\\\small$^1$ Department of Physics, McGill University, Montreal, Canada\\\small$^2$ School of Computer Science, McGill University, Montreal, Canada}
+
+\maketitle
+
+\begin{abstract}
+Chill abstract
+\end{abstract}
+
+\newpage
+
+\input{intro.tex}
+
+\input{methods.tex}
+
+\input{results.tex}
+
+\input{discussion.tex}
+
+
+
+%\input{acknowledgements.tex}
+
+%\input{contributions.tex}
+
+\bibliographystyle{unsrtnat}
+\bibliography{biblio}
+
+\clearpage
+
+%\input{supplementary.tex}
+
+\end{document}  
