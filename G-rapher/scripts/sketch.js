@@ -12,7 +12,7 @@ var r = 50;
 
 
 function setup() {
-  createCanvas(800, 800);
+  canvas = createCanvas(800, 800);
   hash_input = createInput("daa271eb81b2123412");
   hash_input.position(20, 120);
   var text = createElement('h2', "Insert Hex (hash), Min length 16");
@@ -26,6 +26,13 @@ function setup() {
 }
 
 function get_hash() {
+  canvas.background(255);
+    canvas.fill(255);
+    for (var i = 0; i < nodes.length; i++) {
+      nodes[i].text.remove();
+  }
+  nodes = [];
+   links = [];
   hash = hash_input.value();
   hash_text.html("Current Hash: " + hash);
   for (var i = 0; i < hash.length; i++) {
@@ -36,7 +43,7 @@ function get_hash() {
   
 }
 function draw_graph() {
-  clear();
+
   for (var i = 0; i < links.length; i++) {
       var x1 = nodes[links[i][0]].x;
       var y1 = nodes[links[i][0]].y;
@@ -58,10 +65,11 @@ function Node(i, value) {
    this.index = int(i);
    this.x = 250 + 4*r * Math.cos(1.0*int(i) * TWO_PI/hash.length);
    this.y = 400 + 4*r * Math.sin(int(i) * TWO_PI/hash.length);
-   this.text = createElement('h2', this.value);
-   this.text.position(this.x-0.17*r, this.y-0.7*r);
+   
    
    this.show = function() {
+      this.text = createElement('h2', this.value);
+      this.text.position(this.x-0.17*r, this.y-0.7*r);
       push();
       strokeWeight(6);
       fill(255, 255, 255);
