@@ -1,5 +1,6 @@
 var nodes = [];
 var links = [];
+var degrees = [];
 var debug;
 
 var hash;
@@ -35,19 +36,30 @@ function get_hash() {
   }
   nodes = [];
    links = [];
+   degrees = [];
   hash = hash_input.value();
-  hash_text.html("Current Hash: " + hash);
+  
   for (var i = 0; i < hash.length; i++) {
-    nodes.push(new Node(i, hash.charAt(i)));
+    nodes.push(new Node(i, hash.charAt(i))); 
+    degrees.push(0); 
+  }
+
+  for (var i = 0; i < nodes.length; i++) {
+    
+    
     var n = parseInt(hash.charAt(i), 16);
     for (var j = 1; j < int(hash.length/n) + 1; j++) {
       var m = n * j -1;
       if(i != m) {
          links.push(new Array(i, m));
+         degrees[i]++;
+         degrees[m]++;
       }
    }
   }
   draw_graph();
+  console.log(degrees);
+  hash_text.html("Current Hash: " + hash + "   Max Degree: " + Math.max(...degrees));
   
 }
 function draw_graph() {
