@@ -1,11 +1,9 @@
 var nodes = [];
-var links = [];
-var degrees = [];
 var debug;
 
 var hash;
 var hash_input;
-var hash_text;
+var hash_text, block_text;
 var r = 50;
 
 var colours = ['Chartreuse', 'Coral', 'CornflowerBlue', 'Cornsilk', 'Cyan','DarkCyan','DarkGoldenRod',
@@ -24,8 +22,10 @@ function setup() {
   var button = createButton('Read');
   button.position(hash_input.x + hash_input.width + 20, 120);
   button.mousePressed(get_hash);
-  hash_text = createElement('h2', "Current Hash: ");
+  hash_text = createElement('div', "Current Hash: ");
   hash_text.position(hash_input.x + hash_input.width + 200, 120);
+  block_text = createElement('div', "00000000387d715cd2cc44cd8f206568e9c478728613f0413579daa271eb81b2");
+  block_text.position(hash_input.x + hash_input.width + 200, 20);
 
 }
 
@@ -38,43 +38,62 @@ function get_hash() {
       }
   }
   nodes = [];
-   links = [];
-   degrees = [];
+  var seed1 = 0;
+  var seed2 = 1;
+
   hash = hash_input.value();
   
   for (var i = 0; i < hash.length; i++) {
-    nodes.push(new Node(i, hash.charAt(i))); 
-    degrees.push(0); 
+  	var v =hash.charAt(i);
+    nodes.push(new Node(i, v)); 
+    seed1 = seed1 + parseInt(v, 16);
+    seed2 = (seed2 * (parseInt(v, 16) + 1))%(17);
   }
 
   for (var i = 0; i < nodes.length; i++) {
     
     
-    var n = parseInt(hash.charAt(i), 16);
-    for (var j = 1; j < int(hash.length/n) + 1; j++) {
-      var m = n * j -1;
-      if(i != m) {
-         links.push(new Array(i, m));
-         degrees[i]++;
-         degrees[m]++;
+    var n = (parseInt(hash.charAt(i), 16) + seed2)%(nodes.length);
+    for (var j = 0; j <= n; j++) {
+      var m = (seed1 * j)%(nodes.length);
+      console.log(i, m, nodes.length);
+      if(i != m && nodes[i].connections.indexOf(m) == -1 && nodes[m].connections.indexOf(i) == -1) {
+         nodes[i].connections.push(m);
+         nodes[m].connections.push(i);
+         
       }
    }
   }
+
+var max_degree = 0;
+for (var i = 0; i < nodes.length; i++) {
+
+    if(nodes[i].connections.length > max_degree) {
+    	max_degree = nodes[i].connections.length;
+    }
+  }
+
   draw_graph();
-  console.log(degrees);
-  hash_text.html("Current Hash: " + hash + "   Max Degree: " + Math.max(...degrees));
+  var edges = 0;
+  for (var i = 0; i < nodes.length; i++) {
+      edges = edges + nodes[i].connections.length;
+  }
+  edges = 0.5 * edges;
+  hash_text.html("Current Hash: " + hash + "  Seeds: " + seed1 + " " + seed2 + "  Max Degree = " + max_degree  + "  Edges = " + edges + " X_max = " + Math.ceil(0.5 + 0.5 * Math.sqrt(1+8*m)));
   
 }
 function draw_graph() {
 
-  for (var i = 0; i < links.length; i++) {
-      var x1 = nodes[links[i][0]].x;
-      var y1 = nodes[links[i][0]].y;
-      var x2 = nodes[links[i][1]].x;
-      var y2 = nodes[links[i][1]].y;
-      console.log(x1, y1, x2, y2);
+  for (var i = 0; i < nodes.length; i++) {
+  	console.log(nodes[i].connections);
+  	for (var j = 0; j < nodes[i].connections.length; j++) {
+      var x1 = nodes[i].x;
+      var y1 = nodes[i].y;
+      var x2 = nodes[nodes[i].connections[j]].x;
+      var y2 = nodes[nodes[i].connections[j]].y;
       line(x1, y1, x2, y2);
    }
+}
   for (var i = 0; i < nodes.length; i++) {
       nodes[i].show();
   }
@@ -88,7 +107,7 @@ function Node(i, value) {
    this.index = int(i);
    this.x = 400 + 5*r * Math.cos(1.0*int(i) * TWO_PI/hash.length);
    this.y = 500 + 5*r * Math.sin(int(i) * TWO_PI/hash.length);
-   
+   this.connections = [];
    
    this.show = function() {
       this.text = createElement('h2', this.value);
