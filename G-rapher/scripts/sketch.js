@@ -79,7 +79,7 @@ for (var i = 0; i < nodes.length; i++) {
       edges = edges + nodes[i].connections.length;
   }
   edges = 0.5 * edges;
-  hash_text.html("Current Hash: " + hash + "  Seeds: " + seed1 + " " + seed2 + "  Max Degree = " + max_degree  + "  Edges = " + edges + " X_max = " + Math.ceil(0.5 + 0.5 * Math.sqrt(1+8*m)));
+  hash_text.html("Current Hash: " + hash + "  Seeds: " + seed1 + " " + seed2 + "  Max Degree = " + max_degree  + "  Edges = " + edges + " X_max = " + Math.ceil(0.5 + 0.5 * Math.sqrt(1+8*edges)));
   
 }
 function draw_graph() {
