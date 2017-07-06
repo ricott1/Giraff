@@ -7,8 +7,10 @@ var hash_text, block_text;
 var r = 50;
 
 var colours = ['Chartreuse', 'Coral', 'CornflowerBlue', 'Cornsilk', 'Cyan','DarkCyan','DarkGoldenRod',
-'DarkGrey','DarkGreen','DarkKhaki ', 'DarkOrange', 'DarkOrchid', 'DarkRed', 'DarkSalmon','HotPink','Yellow', 'BlueViolet', 'Sienna', 'Silver', 'RosyBrown'];
- 
+'DarkGrey','DarkGreen','DarkKhaki ', 'DarkOrange', 'DarkOrchid', 'DarkRed', 'DarkSalmon','HotPink','Yellow', 'BlueViolet', 'Sienna', 'Silver', 'RosyBrown',
+'MistyRose', 'White', 'BurlyWood', 'Salmon', 'Tomato', 'SlateBlue', 'SeaGreen', 'Plum', 'PaleTurquoise', 'PaleVioletRed', 'OliveDrab', 'Olive', 'MidnightBlue',
+'MediumOrchid', 'LightCyan', 'Grey', 'Gold', 'GoldRod', 'Indigo', 'Maroon'];
+ console.log(colours.length);
 //00000000387d715cd2cc44cd8f206568e9c478728613f0413579daa271eb81b2
 
 
@@ -16,11 +18,11 @@ var colours = ['Chartreuse', 'Coral', 'CornflowerBlue', 'Cornsilk', 'Cyan','Dark
 function setup() {
 
   canvas = createCanvas(1600, 1200);
-  hash_input = createInput("0123456789abcdef");
+  hash_input = createInput("0123456789abcdef", width = 400);
   hash_input.position(20, 120);
   key_input = createInput("Pericles Philippopoulos is gay");
   key_input.position(hash_input.x + hash_input.width + 20, 120);
-  var text = createElement('h2', "Insert Hex (hash), Min length 16");
+  var text = createElement('h2', "Insert hash of the block and signature");
   text.position(20, 20);
   var button = createButton('Read');
   button.position(hash_input.x + hash_input.width + 300, 120);
@@ -56,9 +58,9 @@ function get_hash() {
   for (var i = 0; i < verteces.length; i++) {
     
     
-    var n = (parseInt(hash.charAt(i), 16) + seed2)%(verteces.length);
+    var n = 7 + (parseInt(hash.charAt(i), 16) + seed2)%(verteces.length);
     for (var j = 0; j <= n; j++) {
-      var m = (seed1 * j)%(verteces.length);
+      var m = (seed1 * j + i)%(verteces.length);
       if(i != m && verteces[i].connections.indexOf(m) == -1 && verteces[m].connections.indexOf(i) == -1) {
          verteces[i].connections.push(m);
          verteces[m].connections.push(i);
@@ -81,7 +83,7 @@ for (var i = 0; i < verteces.length; i++) {
       edges = edges + verteces[i].connections.length;
   }
   edges = 0.5 * edges;
-  hash_text.html("Current Hash: " + hash + "<br><br>  Max Degree = " + max_degree  + "  Edges = " + edges + " X_max = " + Math.ceil(0.5 + 0.5 * Math.sqrt(1+8*edges)) + "  Colors: " + (Math.max(...color_list) + 1) );
+  hash_text.html("Hash: " + hash + "<br><br>Max Degree = " + max_degree  + "<br><br>  Edges = " + edges + "<br><br>X_max = " + (max_degree + 1) + " or " + Math.ceil(0.5 + 0.5 * Math.sqrt(1+8*edges)) + "<br><br>Greedy Colors: " + (Math.max(...color_list) + 1) );
   //"<br><br> Hash: " + hash_input.value() + " Key Hash: " + key_hash   +"  Seeds: " + seed1 + " " + seed2 + 
 }
 function draw_graph(color_list) {
