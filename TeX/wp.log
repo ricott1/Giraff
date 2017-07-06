@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  30 JUN 2017 13:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 JUL 2017 09:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1214,12 +1214,46 @@ uage-mappings.tex)))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
+Package: todonotes 2012/07/25
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks37
+\XKV@tempa@toks=\toks38
+)
+\XKV@depth=\count174
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count175
+\calc@Bcount=\count176
+\calc@Adimen=\dimen283
+\calc@Bdimen=\dimen284
+\calc@Askip=\skip76
+\calc@Bskip=\skip77
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count177
+\calc@Cskip=\skip78
+)
+\c@@todonotes@numberoftodonotes=\count178
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip76
-\bibsep=\skip77
+\bibhang=\skip79
+\bibsep=\skip80
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count174
+\c@NAT@ctr=\count179
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -1230,26 +1264,26 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count175
-\float@exts=\toks37
+\c@float@type=\count180
+\float@exts=\toks39
 \float@box=\box90
-\@float@everytoks=\toks38
+\@float@everytoks=\toks40
 \@floatcapt=\box91
 ) (./wp.aux)
 \openout1 = `wp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1287,17 +1321,17 @@ LaTeX Font Info:    ... okay on input line 36.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count176
-\scratchdimen=\dimen283
+\scratchcounter=\count181
+\scratchdimen=\dimen285
 \scratchbox=\box92
-\nofMPsegments=\count177
-\nofMParguments=\count178
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count179
-\MPscratchDim=\dimen284
-\MPnumerator=\count180
-\makeMPintoPDFobject=\count181
-\everyMPtoPDFconversion=\toks40
+\nofMPsegments=\count182
+\nofMParguments=\count183
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count184
+\MPscratchDim=\dimen286
+\MPnumerator=\count185
+\makeMPintoPDFobject=\count186
+\everyMPtoPDFconversion=\toks42
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -1429,28 +1463,28 @@ Dictionary: translator-basic-dictionary, Language: English
 (/usr/local/texlive/2016/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2016/03/01 v2.6q siunitx: Abbreviated units
 )
-\c__siunitx_mathsf_int=\count182
-LaTeX Font Info:    Try loading font information for U+msa on input line 36.
+\c__siunitx_mathsf_int=\count187
+LaTeX Font Info:    Try loading font information for U+msa on input line 38.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 36.
+LaTeX Font Info:    Try loading font information for U+msb on input line 38.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-\c__siunitx_mathtt_int=\count183
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 43.
+\c__siunitx_mathtt_int=\count188
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 45.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
 [][]\OT1/cmr/m/n/9 To whom cor-re-spon-dence should be ad-dressed. Tel: +1 514-
 555-5018; Email:
  []
@@ -1458,37 +1492,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--43
 [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./intro.tex) (./methods.tex) (./results.tex) (./discussion.tex) (./wp.bbl)
-[2] (./wp.aux) )
+(./intro.tex
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 11.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
+ [2]) (./methods.tex) (./results.tex) (./discussion.tex) (./wp.bbl
+[3]) [4] (./wp.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 27464 strings out of 493014
- 576899 string characters out of 6133351
- 600679 words of memory out of 5000000
- 30582 multiletter control sequences out of 15000+600000
- 18402 words of font info for 73 fonts, out of 8000000 for 9000
+ 28054 strings out of 493014
+ 589117 string characters out of 6133351
+ 617016 words of memory out of 5000000
+ 31152 multiletter control sequences out of 15000+600000
+ 18709 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,67p,10374b,6811s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,76p,10374b,7786s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
-fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on wp.pdf (2 pages, 135402 bytes).
+m/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
+.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
+b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on wp.pdf (4 pages, 170828 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 88 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
