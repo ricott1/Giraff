@@ -18,6 +18,6 @@ function color_graph(verteces) {
 		color_list[i] = c;
 		
 	}
-	//console.log(color_list, Math.max(...color_list));
+	console.log(color_list, Math.max(...color_list));
 	return color_list;
 }

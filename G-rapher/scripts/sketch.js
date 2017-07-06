@@ -7,8 +7,8 @@ var hash_text, block_text;
 var r = 50;
 
 var colours = ['Chartreuse', 'Coral', 'CornflowerBlue', 'Cornsilk', 'Cyan','DarkCyan','DarkGoldenRod',
-'DarkGrey','DarkGreen','DarkKhaki ', 'DarkOrange', 'DarkOrchid', 'DarkRed', 'DarkSalmon','HotPink','Yellow', ];
-
+'DarkGrey','DarkGreen','DarkKhaki ', 'DarkOrange', 'DarkOrchid', 'DarkRed', 'DarkSalmon','HotPink','Yellow', 'BlueViolet', 'Sienna', 'Silver', 'RosyBrown'];
+ 
 //00000000387d715cd2cc44cd8f206568e9c478728613f0413579daa271eb81b2
 
 
@@ -25,8 +25,8 @@ function setup() {
   var button = createButton('Read');
   button.position(hash_input.x + hash_input.width + 300, 120);
   button.mousePressed(get_hash);
-  hash_text = createElement('div', "Current Hash: ");
-  hash_text.position(hash_input.x + hash_input.width + 400, 120);
+  hash_text = createElement('div', "");
+  hash_text.position(20, 160);
   block_text = createElement('div', "00000000387d715cd2cc44cd8f206568e9c478728613f0413579daa271eb81b2");
   block_text.position(hash_input.x + hash_input.width + 200, 20);
 
@@ -81,8 +81,8 @@ for (var i = 0; i < verteces.length; i++) {
       edges = edges + verteces[i].connections.length;
   }
   edges = 0.5 * edges;
-  hash_text.html("Current Hash: " + hash + " Hash: " + hash_input.value() + " Key Hash: " + key_hash   +"  Seeds: " + seed1 + " " + seed2 + "<br><br>  Max Degree = " + max_degree  + "  Edges = " + edges + " X_max = " + Math.ceil(0.5 + 0.5 * Math.sqrt(1+8*edges)) + "  Colors: " + (Math.max(...color_list) + 1) );
-  
+  hash_text.html("Current Hash: " + hash + "<br><br>  Max Degree = " + max_degree  + "  Edges = " + edges + " X_max = " + Math.ceil(0.5 + 0.5 * Math.sqrt(1+8*edges)) + "  Colors: " + (Math.max(...color_list) + 1) );
+  //"<br><br> Hash: " + hash_input.value() + " Key Hash: " + key_hash   +"  Seeds: " + seed1 + " " + seed2 + 
 }
 function draw_graph(color_list) {
 
@@ -107,8 +107,8 @@ function Vertex(i, value) {
    this.color = -1;
    this.value = value;
    this.index = int(i);
-   this.x = 800 + 10*r * Math.cos(1.0*int(i) * TWO_PI/hash.length);
-   this.y = 600 + 10*r * Math.sin(int(i) * TWO_PI/hash.length);
+   this.x = 900 + 9.5*r * Math.cos(1.0*int(i) * TWO_PI/hash.length);
+   this.y = 580 + 9.5*r * Math.sin(int(i) * TWO_PI/hash.length);
    this.connections = [];
    
    this.show = function(color_list) {
@@ -116,8 +116,10 @@ function Vertex(i, value) {
       this.text.position(this.x-0.17*r, this.y-0.7*r);
       push();
       strokeWeight(5);
-      fill(colours[color_list[this.index]]);
-      //stroke(255 - weigth, 255 - weigth, 255);
+      //fill(colours[this.index%16]);
+      //console.log(colours[this.index%16], this.index, this.value);
+     fill(colours[color_list[this.index]]);
+      
       ellipse(this.x, this.y , r, r);
 
       pop();
