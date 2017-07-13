@@ -1,2 +1,2 @@
 # Giraff
-Proof-of-work solving Np complete problems
+Convert hash and signature into a graph. Then colours it using the Greedy algorithm.
